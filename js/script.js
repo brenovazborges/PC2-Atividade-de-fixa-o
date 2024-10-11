@@ -38,15 +38,31 @@ function addAluno(){
         "curso": "Informática",
         "genero":"feminino"
     }
-];
+    ];
 
     let aluno = { 
-
         "matricula": document.getElementById("matricula").value,
         "nome": document.getElementById("nome").value,
         "datanasc": document.getElementById("datanasc").value,
         "curso": document.getElementById("curso").value,
         "genero": document.getElementById("genero").value
-    }
+    };
 
-};
+    Alunos.push(aluno);
+    console.log(Alunos);
+
+    let findFeminino = Alunos.find(aluno => aluno.genero == "feminino");
+    console.log(findFeminino);
+
+    let filterCursoGenero = Alunos.filter(aluno => aluno.curso == "Informática" && aluno.genero == "masculino");
+    console.log(filterCursoGenero);
+
+    let filterRM = Alunos.filter(aluno => aluno.matricula > "13300");
+    console.log(filterRM);
+    
+
+    
+
+
+
+}
